@@ -97,13 +97,19 @@ function fiveRoundWinner () {
     if(playerScore === 5 ) {
         gameMessage.textContent = 'Congratulations, you\'ve won the game!';
         gameMessage_div.appendChild(gameMessage);
-        computerScore_class = '0';
-        playerScore_class = '0' + ':';
+        computerScore_class.textContent = '0';
+        playerScore_class.textContent = '0' + ':';
+        computerScore = 0;
+        playerScore = 0;
+    
     }else if (computerScore === 5){
         gameMessage.textContent = 'Computer has won the game, try again.';
         gameMessage_div.appendChild(gameMessage);
         computerScore_class.textContent = '0';
         playerScore_class.textContent = '0' + ':';
+        computerScore = 0;
+        playerScore = 0;
+        
     }
 }
 
