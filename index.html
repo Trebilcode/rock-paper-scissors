@@ -4,72 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Rock, paper, scissors</title>
 </head>
 <body>
-    <script>
+    <header>
+        Rock, paper scissors
+    </header>
 
-        let playerScore = 0;
-        let computerScore = 0;
-
-        function computerPlay() {
-            let computerTurn = Math.floor(Math.random()* 3)
-            switch (computerTurn) {
-                case 0:
-                return 'rock';
-                break;
-                case 1:
-                return 'paper';
-                break;
-                case 2: 
-                return 'scissors';
-                break;
-            }
-        }
-       
-        function playRound (playerSelection, computerSelection) {
-            
-               computerSelection = computerPlay();
-               playerSelection = prompt('Please make a choice');
-               playerSelection = playerSelection.toLowerCase();
-               if (computerSelection ===  playerSelection ) {
-                    computerScore++; playerScore++; return 'It is a draw'; 
-               } else if (computerSelection === 'rock' && playerSelection === 'scissors'){
-                    computerScore++; return 'Computer got rock, it wins: rock beats scissors.'; 
-               } else if (computerSelection === 'rock' && playerSelection === 'paper'){
-                    playerScore++;return 'Computer got rock, YOU WIN: paper covers rock.'; 
-               } else if (computerSelection === 'paper' && playerSelection === 'rock'){
-                    computerScore++;return 'Computer got paper, it wins: paper covers rock.'; 
-               } else if (computerSelection === 'paper' && playerSelection === 'scissors') {
-                    playerScore++;return 'Computer got paper, YOU WIN: scissors cut paper.'; 
-               } else if (computerSelection === 'scissors' && playerSelection === 'rock') {
-                    playerScore++;return 'Computer got scissors, YOU WIN: rock beats scissors.'; 
-               } else if (computerSelection === 'scissors' && playerSelection === 'paper') {
-                    computerScore++;return 'Computer got scissors, it wins: scissors cut paper.';           
-               }
-        }
-
-        function reset () {
-            computerScore = 0;
-            playerScore = 0;
-        }
-
-        function game () {
-            for (let i = 0; i < 5; i++) {
-                 console.log(playRound());
-                 console.log(`computer score is ${computerScore}. Your score is ${playerScore}.`)
-            }
-            if (computerScore > playerScore) {
-                console.log(`Computer score is ${computerScore}, and yours is ${playerScore}; computer wins, please try again`);
-            } else if (computerScore < playerScore){
-                console.log(`Your score is ${playerScore}, and computer score is ${computerScore}; CONGRATULATIONS: YOU WIN!`);
-            } else {
-                console.log('It is a tie');
-            }          
-
-            reset ();
-        }
-    </script>
+    <div class="score-board">     
+        
+        <p>User</p>
+        <span><p class="user-score"> 0: </p></span><span><p class="computer-score"> 0 </p></span>
+        <p class="computer">Computer</p>   
+        
+    </div>
+    <div class="game-message">
+        
+    </div>
+    <div class="choices">
+        <div id="rock">
+            <img src="rock.jpeg" alt="">
+        </div>
+        <div id="paper">
+            <img src="paper.jpeg" alt="">
+        </div>
+        <div id="scissors">
+            <img src="scissors.jpeg" alt="">
+        </div>
+    </div>
     
-</body>
+    <script src="app.js"></script>
+</body> 
 </html>
