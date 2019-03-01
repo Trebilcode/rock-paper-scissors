@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+@import url('https://fonts.googleapis.com/css?family=Asap');
 
 
 * {
@@ -13,7 +14,7 @@ header {
     width: 100%;
     font-size: 5rem;
     text-align: center;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Josefin Slab', serif, 'Asap', sans-serif;
 }
 
 .score-board {
@@ -30,7 +31,7 @@ header {
 
 .score-board > p, .score-board > span {
     display: inline-block;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Josefin Slab', serif, 'Asap', sans-serif ;
     
 }
 
