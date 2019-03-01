@@ -36,11 +36,15 @@ header {
 }
 
 .user-score {
-    margin-left: 50rem;
+    margin-left: 25rem;
 }
 
 .computer {
-    margin-left: 40rem;
+    margin-left: 20rem;
+}
+
+.user {
+    margin-left: 20rem;
 }
 
 .game-message {
