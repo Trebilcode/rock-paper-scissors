@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +12,8 @@ header {
     color: white;
     width: 100%;
     font-size: 5rem;
-    text-align: center
+    text-align: center;
+    font-family: 'Josefin Slab', serif;
 }
 
 .score-board {
@@ -26,6 +30,7 @@ header {
 
 .score-board > p, .score-board > span {
     display: inline-block;
+    font-family: 'Josefin Slab', serif;
     
 }
 
